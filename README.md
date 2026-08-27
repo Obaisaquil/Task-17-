@@ -8,7 +8,7 @@ This project performs division of two numbers entered by the user.
 - Uses JavaScript Promise
 - Handles division by zero
 - Uses `throw` and `reject()`
-- Uses `async/await`
+- Uses `.then()\.catch()`
 - Uses `try...catch` for error handling
 
 ## How It Works
