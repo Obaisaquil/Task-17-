@@ -13,16 +13,15 @@ const divideNumbers = (num1, num2) => {
 };
 
 
-const num1 = Number(prompt("Enter the first number:"));
-const num2 = Number(prompt("Enter the second number:"));
-
-const calculateDivision = async () => {
-    try {
-        const result = await divideNumbers(num1, num2);
-        console.log("Result:", result);
-    } catch (error) {
-        console.log("Error:", error.message);
-    }
-};
-
-calculateDivision();
+for (let i=0; i<5; i++) {
+    const num1 = Number(prompt(`Test Case ${i+1} -> Enter First Number`));
+    const num2 = Number(prompt(`Test Case ${i+1} -> Enter Second Number`));
+    
+    divideNumbers(num1, num2)
+    .then((result) => {
+        console.log(`Test Case ${i+1} : dividing ${num1} by ${num2}\nResult:`, result);
+    })
+    .catch((error) => {
+        console.log(`Test Case ${i+1} : dividing ${num1} by ${num2}\nError:`, error.message);
+    });
+}
